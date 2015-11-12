@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Reverse Engineering Passion Team")]
 [assembly: AssemblyProduct("de4dotShell")]
-[assembly: AssemblyCopyright("Copyright © Reverse Engineering Passion Team 2014")]
+[assembly: AssemblyCopyright("Copyright © Reverse Engineering Passion Team 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

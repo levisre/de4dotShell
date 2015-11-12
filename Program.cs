@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace de4dotShell
@@ -14,13 +13,15 @@ namespace de4dotShell
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //CHeck if file is passed via argument
           if(args.Length>0)
             {
+                //Shoe deob form if file detected
                 Application.Run(new deobform(args[0]));
             }
             else
             {
-              
+                //Show ConfigForm
                 Application.Run(new configForm());
             }
         }

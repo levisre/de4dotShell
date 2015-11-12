@@ -49,7 +49,8 @@
             // 
             // outputbox
             // 
-            this.outputbox.BackColor = System.Drawing.Color.Green;
+            this.outputbox.BackColor = System.Drawing.Color.Black;
+            this.outputbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outputbox.ForeColor = System.Drawing.Color.White;
             this.outputbox.Location = new System.Drawing.Point(3, 128);
             this.outputbox.Name = "outputbox";

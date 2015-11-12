@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using de4dotEngine;
 
 namespace de4dotShell
 {
@@ -19,13 +13,28 @@ namespace de4dotShell
             de4dotDetect = de4dot.Verbose();
             InitializeComponent();
             int contextstatus = de4dot.Contextual(true);
-            if (contextstatus == 1)
+            switch (contextstatus)
             {
-                regShell.Checked = false;
+                case de4dotHandle.CONTEXT_EXIST:
+                    {
+                        regShell.Checked = true;
+                        break;
+                    }
+                case de4dotHandle.CONTEXT_REMOVED:
+                    {
+                        regShell.Checked = false;
+                        break;
+                    }
+                case de4dotHandle.ERROR_OCCURED:
+                    {
+                        Environment.Exit(-1);
+                        break;
+                    }
+
             }
-            else
+            if (de4dotDetect == de4dotHandle.de4dotNotFoundStr)
             {
-                regShell.Checked = true;
+                regShell.Enabled = false;
             }
         }
 
@@ -48,7 +57,7 @@ namespace de4dotShell
 
         private void aboutBtn_Click(object sender, EventArgs e) //About button click
         {
-            MessageBox.Show("de4dotShell v0.1\n\n Created by Levis Nickaster\n\n Based on de4dotUI by Yashar Mahmoudnia\n Email: levintaeyeon[at]live[dot]com",
+            MessageBox.Show("de4dotShell v0.1b\n\n Created by Levis Nickaster\n\n Based on de4dotUI by Yashar Mahmoudnia\n Email: levintaeyeon[at]live[dot]com",
                 "About",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);

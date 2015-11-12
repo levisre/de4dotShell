@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using System.IO;
-using System.Threading;
-using Microsoft.Win32;
-using System.Runtime.InteropServices;
-using System.Diagnostics;
-using de4dotEngine;
 
 namespace de4dotShell
 {
@@ -26,7 +14,7 @@ namespace de4dotShell
             InitializeComponent();
             if (!de4dot.de4dotExist)
             {
-                outputbox.Text +=de4dot.de4dotNotFoundStr;
+                outputbox.Text +=de4dotHandle.de4dotNotFoundStr;
                 deobbtn.Enabled = false;
             }
             else
