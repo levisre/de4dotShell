@@ -13,7 +13,7 @@ See the screenshot below:
 ![Deobfuscation Windows](https://raw.githubusercontent.com/levisre/de4dotShell/master/screenshots/deobform.png)
 
 This is a small update of my old project, which is abandoned for a while due to my busy work in real life.
-Someone reported that this works fine in Windows 7, but not in 8/8.1 and Windwos 10. So here is the fix for that issues.
+Someone reported that this works fine on Windows 7, but not on 8/8.1 and Windwos 10. So here is the fix for that issue.
 
 How to use
 ----------
@@ -47,5 +47,5 @@ Credits
 Greetz fly out to:
 
 - 0xd4d (author of de4dot): https://github.com/0xd4d
-- Yashar Mamoudnida
+- Yashar Mahmoudnia
 - Members of B@S, Tus4you, Exetools, REPT, Cin1 and all my friends
